@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("assets/MavenPro.woff2") format('woff2');
+}
+  
+::selection {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+* {
+    font-family: 'Maven Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #4285f4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #000000;
+}
+
+body {
+    background-color: #fbfbfb;
+}
+
+@media (min-width: 991.98px) {
+    main {
+        padding-left: 240px;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+    width: 240px;
+    z-index: 600;
+}
+
+.list-group-item {
+    padding-top: 7% !important;
+    padding-bottom: 7% !important;
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+.sidebar .active {
+    border-radius: 50px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.card {
+    box-shadow: 0 0 5em rgba(0, 0, 0, .1);
+    transition: box-shadow .3s;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 1%;
+}
+
+.card:hover, .accordion:hover {
+    transition: box-shadow .3s;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+
+.card-header, .accordion-header {
+    background: none;
+    border: none;
+}
+
+img {
+    background-color: #fbfbfb;
+    border-radius: 50px;
+}
+
+.form-control, .input-group-text {
+    border-radius: 50px;
+}
