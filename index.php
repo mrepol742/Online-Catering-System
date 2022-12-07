@@ -17,6 +17,7 @@
 
   <link rel="shortcut icon" href="catering.png">
   <link rel="apple-touch-icon" href="catering.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Online Catering System</title>
 </head>
 
@@ -55,7 +56,7 @@
         <ul class="navbar-nav ms-auto d-flex flex-row">
           <li class="nav-item">
             <a class="nav-link me-3 me-lg-0" href="#">
-              Menu
+             Menu
             </a>
           </li>
           <li class="nav-item">
@@ -66,7 +67,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
               id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
+              <img src="https://mrepol742.github.io/favicon.ico" class="rounded-circle" height="22"
                 alt="" loading="lazy" />
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
@@ -154,6 +155,58 @@
           <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Birthday Bundle 2</h5>
+            <p class="card-text">comming soon</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Weeding Bundle 2</h5>
+            <p class="card-text">comming soon</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Saver Pack 3</h5>
+            <p class="card-text">comming soon</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Birthday Bundle 3</h5>
+            <p class="card-text">comming soon</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Weeding Bundle 3</h5>
+            <p class="card-text">comming soon</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Saver Pack 4</h5>
+            <p class="card-text">comming soon</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Birthday Bundle 4</h5>
             <p class="card-text">comming soon</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>

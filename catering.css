@@ -101,10 +101,31 @@ body {
 }
 
 img {
-    background-color: #fbfbfb;
     border-radius: 50px;
 }
 
 .form-control, .input-group-text {
     border-radius: 50px;
+}
+
+::-webkit-scrollbar {
+	width: 13px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+	border: none;
+	background-color: #4285f4;
+	border-radius: 0.5em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #3a76d8;
+}
+
+.list-group-flush>.list-group-item {
+    border-width: 0;
 }
