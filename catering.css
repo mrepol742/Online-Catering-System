@@ -101,7 +101,7 @@ body {
 }
 
 img {
-    border-radius: 50px;
+    border-radius: 20px !important;
 }
 
 .form-control, .input-group-text {

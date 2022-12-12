@@ -1,4 +1,36 @@
 <?php
+include("connections.php");
+
+$packages = "\n";
+
+$sql = "SELECT * FROM packages";
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+
+        $packages = $packages . '
+        <div class="col-sm-3">
+        <div class="card ">
+        <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
+          <div class="card-body">
+          <h5 class="card-title">' . $row["name"] . '</h5>
+          <p class="card-text">' . $row["items"] . '</p>
+          <p class="card-text"><small class="text-muted">' . $row["price"] . '</small></p>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+        ';
+
+    }
+} else {
+
+}
+
+$conn->close();
 
 
 ?>
@@ -26,15 +58,15 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
+          <a href="#starters" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
             <i class="fas fa-star fa-fw me-3"></i><span>Starters</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#packages" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-archive fa-fw me-3"></i><span>Packages</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+          <a href="#drinks" class="list-group-item list-group-item-action py-2 ripple"><i
               class="fas fa-wine-glass-alt fa-fw me-3"></i><span>Drinks</span></a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+          <a href="#sweets" class="list-group-item list-group-item-action py-2 ripple"><i
               class="fas fa-cookie-bite fa-fw me-3"></i><span>Sweets</span></a>
         </div>
       </div>
@@ -82,140 +114,18 @@
   </header>
   <main style="margin-top: 58px">
     <div class="container pt-4">
-      <div class="card-group">
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Sweet Bundle</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Happy Pack</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Big Muck</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
+      <div class="row" id="row">
+      <?php echo $packages ?>
+
       </div>
-      <div class="card-group">
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Happy Meal</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Saver Pack</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Birthday Bundle</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-      <div class="card-group">
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Weeding Bundle</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Saver Pack 2</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Birthday Bundle 2</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-      <div class="card-group">
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Weeding Bundle 2</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Saver Pack 3</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Birthday Bundle 3</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-      <div class="card-group">
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Weeding Bundle 3</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Saver Pack 4</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://source.unsplash.com/1080x700?food" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Birthday Bundle 4</h5>
-            <p class="card-text">comming soon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
+
     </div>
   </main>
   <script src="assets/bootstrap-5.0.2js.min.js"></script>
   <script src="catering.js"></script>
+  <script>
+
+  </script>
 
 </body>
 
