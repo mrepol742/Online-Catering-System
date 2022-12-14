@@ -25,10 +25,8 @@
                 echo "<script>alert('Email is already Registered')</script>";
             } else {
                 if (!empty($email) && !empty($password)) {
-                    $sql = "INSERT INTO user (email, pass,ppass, account_type) VALUES ('$email', '$password', $password','2')";
+                    $sql = "INSERT INTO user (email, pass, account_type) VALUES ('$email', '$password','2')";
                     if ($conn->query($sql) === TRUE) {
-                        $_SESSION['user_login'] = "true";
-                        $_SESSION['email'] = $email;
                         header('Location: login.php');
                         die();
                     }

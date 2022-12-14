@@ -31,8 +31,9 @@ if (empty($_SESSION['user_login'])) {
                            
                             $_SESSION['user_login'] = "true";
                             $_SESSION["email"] = $email;
-                            if ($db_account_type == "1"){
-                               header('Location: admin/index.php');
+                            $_SESSION["is_admin"] = $db_account_type;
+                            if ($db_account_type == 1){
+                               header('Location: admin_list.php');
                             } else {
                                 header('Location: index.php');
                             }
@@ -118,7 +119,7 @@ if (empty($_SESSION['user_login'])) {
                                 <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
                                 <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
                                 <div class="mb-3"><button class="btn btn-primary shadow d-block w-100" type="submit" name="submit">Log in</button></div>
-                                <p class="text-muted"><a href="forgot-password.php">Forgot password?</a></p>
+                                <p class="text-muted"><a href="signup.php">Signup</a> | <a href="forgot-password.php">Forgot password?</a></p>
                             </form>
                         </div>
                     </div>

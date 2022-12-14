@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
         <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
             <div>
                 <h5 class="fw-bold">' . $row["name"] . '</h5>
-                <p class="text-muted mb-4">' . $row["items"] . '</p><form action="<?php htmlspecialchars("php_self"); ?>" method="post"><button class="btn btn-primary shadow" type="submit" name="submit">Add to cart</button></form>
+                <p class="text-muted mb-4">' . $row["items"] . '</p><p class="text-muted mb-0">' . $row["cost"] . '₱</p><br><button class="btn btn-primary shadow" type="submit" name="submit">Checkout</button>
             </div>
         </div>
     </div>';
@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
         <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
             <div>
                 <h5 class="fw-bold">' . $row["name"] . '</h5>
-                <p class="text-muted mb-4">' . $row["items"] . '</p><form action="<?php htmlspecialchars("php_self"); ?>" method="post"><button class="btn btn-primary shadow" type="submit" name="submit">Add to cart</button></form>
+                <p class="text-muted mb-4">' . $row["items"] . '</p><p class="text-muted mb-0">' . $row["cost"] . '₱</p><br><button class="btn btn-primary shadow" type="submit" name="submit">Checkout</button>
             </div>
         </div>
     </div>';

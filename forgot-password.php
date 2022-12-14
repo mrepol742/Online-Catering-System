@@ -2,7 +2,7 @@
 include("./include/dbcon.php");
   
 
-$email = $password = $ppassword ="";
+$email = $password ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"])) {
@@ -24,19 +24,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
     if (isset($_POST['submit'])) {
-            $check_email = mysqli_query($conn, "SELECT email FROM user where email = '$email'");
+               
 
-                if (mysqli_num_rows($check_email) > 0){
-                    while ($row = mysqli_fetch_assoc($check_cred)) {
-                        $db_email = $row["email"];
-                        $db_password = $row["pass"];
-                        $update = mysqli_query($conn, "UPDATE user SET pass='$password' where email='$email'");
-                        header("location:login.php");
+          $check_email = mysqli_query($conn, "SELECT * FROM user where email = '$email'");
+            if (mysqli_num_rows($check_email) > 0) {
+                while ($row = mysqli_fetch_assoc($check_email)) {
+                    $db_id = $row["id"];
+                    $sql = "UPDATE user SET pass = '$password' WHERE id = '$db_id'";
+				    if ($conn->query($sql)) {
+                        header('Location: login.php');
+                        die();
                     }
-                } else {
-                    echo "<script>alert('Email not registered.');</script>";
-                }                
-         
+                }
+            } else {
+                echo "<script>alert('Email not registered.');</script>";
+            }
     }
 }
 
