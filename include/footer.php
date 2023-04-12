@@ -15,6 +15,7 @@
             </ul>
         </div>
     </div>
+</footer>
     <script src="/assets/lozad/js/lozad.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
@@ -23,7 +24,7 @@
         const observer = lozad();
 observer.observe();
         if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').then((reg) => {
+    navigator.serviceWorker.register('/sw.js').then((reg) => {
       console.log('[ServiceWorker] Registered');
     }).catch((err) => {
       console.error('[ServiceWorker] failed: ', err)
