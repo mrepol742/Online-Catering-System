@@ -1,4 +1,4 @@
 # Online-Catering-System
-A Project for HCI Subject.
+Project in HCI Class
 
 <img src="demo.png">
